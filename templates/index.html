@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: aqua;
+        }
+        body h1,hr{
+            background-color: aquamarine;
+            text-align: center;
+            width:800px;
+            margin-left: 420px;
+            border:2px solid aqua;
+
+        }
+        .form{
+            background-color: aquamarine;
+            width:800px;
+           
+            margin-left: 420px;
+            text-align: center;
+            
+        }
+        .form input{
+            width:270px;
+            height: 40px;
+            margin:10px;
+        }
+        form button{
+            height: 40px;
+            width:120px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+        form button:hover{
+            background-color: white;
+            color: black;
+        }
+       
+    </style>
+</head>
+<body>
+    {% if msgg==1 %}
+        <div class="alert alert-success" role="alert">
+            This is a success alert—check it out!
+          </div>
+        {% elif msgg==0 %}
+            <div class="alert alert-danger" role="alert">
+            This is a danger alert—check it out!
+            </div>
+        {% endif %}
+    <h1>Form</h1>
+    <hr>
+    <div class="form">
+        
+       
+        <form action="" method="post">
+            <input type="text" placeholder="Username" name="uname" required><br>
+            <input type="text" placeholder="roll_no" name="roll_no"><br>
+            <input type="email" placeholder="email" name="email"><br>
+            <input type="password" placeholder="password" name="password"><br>
+            <button>Submit</button>
+        </form>
+    </div>
+    
+</body>
+</html>

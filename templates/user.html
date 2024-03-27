@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        table{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="table">
+        <table style="text-align: center;position: relative;top:200px;left:420px;" border="1">
+            <head>
+             <tr>
+                <th>s.no</th>
+                <th>username</th>
+                <th>roll_no</th>
+                <th>email</th>
+                <th>password</th>
+                <th>Time</th>
+                <th>action</th>
+             </tr>
+
+            </head>
+            <body>
+                    {% for i in us %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ i[1] }}</td>
+                            <td>{{ i[2] }}</td>
+                            <td>{{ i[3] }}</td>
+                            <td>{{ i[4] }}</td>
+                            <td>{{ i[5] }}</td>
+                            <td><a class="btn btn-info" href="/editinfo?id={{ i[0] }}"><button>edit</button></a>
+                            <a href="/delete?id={{ i[0] }}" class="btn btn-danger" onclick="return confirm('are you sure to delete')"><button>delete</button></a>
+                        </td>
+
+                        </tr>
+
+                    {% endfor %}
+               
+                
+
+            </body>
+        </table>
+    </div>
+</body>
+</html>
